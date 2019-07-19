@@ -1,0 +1,8 @@
+all:
+  javascripts:    [plugins/dataTables/jquery.dataTables.js, plugins/dataTables/dataTables.bootstrap.js, plugins/dataTables/dataTables.responsive.js, plugins/dataTables/dataTables.tableTools.min.js, plugins/contextMenu/jquery.contextmenu.js, plugins/iCheck/icheck.min.js,plugins/chosen/chosen.jquery.js]
+  stylesheets:    [plugins/dataTables/dataTables.bootstrap.css, plugins/dataTables/dataTables.responsive.css, plugins/dataTables/dataTables.tableTools.min.css, plugins/contextMenu/jquery.contextMenu.css, plugins/iCheck/blue.css,plugins/chosen/chosen.css]
+  
+signinSuccess:
+  has_layout: false
+editPasswordSuccess:
+  has_layout: false

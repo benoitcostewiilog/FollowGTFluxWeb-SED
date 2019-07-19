@@ -1,0 +1,4 @@
+indexSuccess:
+  javascripts:    [plugins/form/jquery.form.js,plugins/chosen/chosen.jquery.js,plugins/toastr/toastr.min.js, plugins/magnific-popup/jquery.magnific-popup.min.js, plugins/spinedit/bootstrap-spinedit.js, plugins/iCheck/icheck.min.js, plugins/sweetalert/sweetalert.min.js,plugins/fullcalendar/moment.min.js, plugins/datetimepicker/bootstrap-datetimepicker.min.js,plugins/moment/fr.js]
+  stylesheets:    [plugins/chosen/chosen.css, plugins/magnific-popup/magnific-popup.css, plugins/datetimepicker/bootstrap-datetimepicker.min.css, plugins/iCheck/blue.css, plugins/datetimepicker/bootstrap-datetimepicker.min.css]
+

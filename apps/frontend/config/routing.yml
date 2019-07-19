@@ -1,0 +1,685 @@
+homepage:
+  url:   /
+  param: { module: acceuil, action: index }
+accueil:
+  url:   /
+  param: { module: acceuil, action: index }
+
+#URLS page d accueil
+localized_homepage:
+  url:   /:sf_culture/
+  param: { module: acceuil, action: index }
+  requirements:
+    sf_culture: (?:fr|en)
+acceuil:
+  url:   /
+  param: { module: acceuil, action: index }
+acceuil-list-retard-ajax:
+  url:   /acceuil-list-retard-ajax
+  param: { module: acceuil, action: produitRetardAjax }
+acceuil-arrivage-retard-ajax:
+  url:   /acceuil-arrivage-retard-ajax
+  param: { module: acceuil, action: arrivageRetardAjax }
+acceuil-depose-retard-ajax:
+  url:   /acceuil-depose-retard-ajax
+  param: { module: acceuil, action: deposeRetardAjax }
+acceuil-encours-ajax:
+  url:   /acceuil-encours-ajax
+  param: { module: acceuil, action: encoursAjax }
+acceuil-reception-retard-ajax:
+  url:   /acceuil-reception-retard-ajax
+  param: { module: acceuil, action: receptionRetardAjax }
+acceuil-reload-stats:
+  url:   /acceuil-reload-stats
+  param: { module: acceuil, action: reloadStats }
+acceuil-list-retard-excel:
+  url:   /acceuil-list-retard-excel
+  param: { module: acceuil, action: listRetardExcel }
+acceuil-list-retard-word:
+  url:   /acceuil-list-retard-word
+  param: { module: acceuil, action: listRetardWord }
+acceuil-list-retard-print:
+  url:   /acceuil-list-retard-print
+  param: { module: acceuil, action: listRetardPrint }
+  
+#URLS permettant de switcher le langage
+change_language:
+  url:   /change_language
+  param: { module: language, action: changeLanguage }
+
+#URLS parametrage
+parametrage:
+  url:   /:sf_culture/parametrage
+  param: { module: parametrage, action: index }
+parametrage-add-feries:
+  url:   /:sf_culture/parametrage-add-feries
+  param: { module: parametrage, action: addFeries }
+parametrage-add-jour:
+  url:   /:sf_culture/parametrage-add-jour
+  param: { module: parametrage, action: addJour }
+parametrage-remove-jour-feries:
+  url:   /:sf_culture/parametrage-remove-jour-feries
+  param: { module: parametrage, action: removeJourFeries }
+parametrage-list-feries-ajax:
+  url:   /:sf_culture/parametrage-list-feries-ajax
+  param: { module: parametrage, action: listFeriesAjax }
+parametrage-update-horaire:
+  url:   /:sf_culture/parametrage-update-horaire
+  param: { module: parametrage, action: updateHoraire }
+parametrage-list-horaires-ajax:
+  url:   /:sf_culture/parametrage-list-horaires-ajax
+  param: { module: parametrage, action: listHorairesAjax }
+parametrage-remove-horaire:
+  url:   /:sf_culture/parametrage-remove-horaire
+  param: { module: parametrage, action: removeHoraire }
+parametrage-remove-all-horaire:
+  url:   /:sf_culture/parametrage-remove-all-horaire
+  param: { module: parametrage, action: removeAllHoraire }
+  
+#URLS module Mouvements
+mouvements:
+  url:   /:sf_culture/mouvements/*
+  param: { module: mouvements, action: index }
+mouvements-list-ajax:
+  url:   /:sf_culture/mouvements-list-ajax/*
+  param: { module: mouvements, action: listAjax }
+mouvements-list-json:
+  url:   /:sf_culture/mouvements-list-json/*
+  param: { module: mouvements, action: listJson }
+mouvements-new:
+  url:   /:sf_culture/mouvements-new/*
+  param: { module: mouvements, action: new }
+mouvements-edit:
+  url:   /:sf_culture/mouvements-edit/*
+  param: { module: mouvements, action: edit }
+mouvements-create:
+  url:   /:sf_culture/mouvements-create/*
+  param: { module: mouvements, action: create }
+mouvements-update:
+  url:   /:sf_culture/mouvements-update/*
+  param: { module: mouvements, action: update }
+mouvements-delete:
+  url:   /:sf_culture/mouvements-delete/*
+  param: { module: mouvements, action: delete }
+mouvements-word:
+  url:   /:sf_culture/mouvements-word/*
+  param: { module: mouvements, action: word }
+mouvements-excel:
+  url:   /:sf_culture/mouvements-excel/*
+  param: { module: mouvements, action: excel }
+mouvements-print:
+  url:   /:sf_culture/mouvements-print/*
+  param: { module: mouvements, action: print }
+mouvements-excel-delais:
+  url:   /:sf_culture/mouvements-excel-delais/*
+  param: { module: mouvements, action: excelAvecDelais }
+mouvements-csv:
+  url:   /:sf_culture/mouvements-csv/*
+  param: { module: mouvements, action: csv }
+
+#URLS module Expedition
+expedition:
+  url:   /:sf_culture/expedition/*
+  param: { module: expedition, action: index }
+expedition-list-ajax:
+  url:   /:sf_culture/expedition-list-ajax/*
+  param: { module: expedition, action: listAjax }
+expedition-new:
+  url:   /:sf_culture/expedition-new/*
+  param: { module: expedition, action: new }
+expedition-edit:
+  url:   /:sf_culture/expedition-edit/*
+  param: { module: expedition, action: edit }
+expedition-create:
+  url:   /:sf_culture/expedition-create/*
+  param: { module: expedition, action: create }
+expedition-update:
+  url:   /:sf_culture/expedition-update/*
+  param: { module: expedition, action: update }
+expedition-delete:
+  url:   /:sf_culture/expedition-delete/*
+  param: { module: expedition, action: delete }
+expedition-word:
+  url:   /:sf_culture/expedition-word/*
+  param: { module: expedition, action: word }
+expedition-excel:
+  url:   /:sf_culture/expedition-excel/*
+  param: { module: expedition, action: excel }
+expedition-print:
+  url:   /:sf_culture/expedition-print/*
+  param: { module: expedition, action: print }
+expedition-print-num:
+  url:   /:sf_culture/expedition-print-num/*
+  param: { module: expedition, action: printNumExpedition }
+  
+#URLS module Arrivage
+arrivage:
+  url:   /:sf_culture/arrivage/*
+  param: { module: arrivage, action: index }
+arrivage-list-ajax:
+  url:   /:sf_culture/arrivage-list-ajax/*
+  param: { module: arrivage, action: listAjax }
+arrivage-new:
+  url:   /:sf_culture/arrivage-new/*
+  param: { module: arrivage, action: new }
+arrivage-edit:
+  url:   /:sf_culture/arrivage-edit/*
+  param: { module: arrivage, action: edit }
+arrivage-edit-urgence:
+  url:   /:sf_culture/arrivage-edit-urgence/*
+  param: { module: arrivage, action: editUrgence }
+arrivage-create:
+  url:   /:sf_culture/arrivage-create/*
+  param: { module: arrivage, action: create }
+arrivage-update:
+  url:   /:sf_culture/arrivage-update/*
+  param: { module: arrivage, action: update }
+arrivage-delete:
+  url:   /:sf_culture/arrivage-delete/*
+  param: { module: arrivage, action: delete }
+arrivages-word:
+  url:   /:sf_culture/arrivages-word/*
+  param: { module: arrivage, action: word }
+arrivages-excel:
+  url:   /:sf_culture/arrivages-excel/*
+  param: { module: arrivage, action: excel }
+arrivages-print:
+  url:   /:sf_culture/arrivages-print/*
+  param: { module: arrivage, action: print }
+arrivages-print-codebarre:
+  url:   /:sf_culture/arrivages-print-codebarre/*
+  param: { module: arrivage, action: printCodeBarre }
+arrivages-print-codesbarres:
+  url:   /:sf_culture/arrivages-print-codesbarres/*
+  param: { module: arrivage, action: printCodesBarres }
+arrivages-print-num:
+  url:   /:sf_culture/arrivages-print-num/*
+  param: { module: arrivage, action: printNumArrivage }
+arrivages-check-num-arrivage:
+  url:   /:sf_culture/arrivages-check-num-arrivage/*
+  param: { module: arrivage, action: checkNumArrivage }
+arrivage-urgence-update:
+  url:   /:sf_culture/arrivage-urgence-update/*
+  param: { module: arrivage, action: arrivageUrgenceUpdate }
+   
+   #URLS module urgence
+urgence:
+  url:   /:sf_culture/urgence/*
+  param: { module: urgence, action: index }
+urgence-list-ajax:
+  url:   /:sf_culture/urgence-list-ajax/*
+  param: { module: urgence, action: listAjax }
+urgence-new:
+  url:   /:sf_culture/urgence-new/*
+  param: { module: urgence, action: new }
+urgence-edit:
+  url:   /:sf_culture/urgence-edit/*
+  param: { module: urgence, action: edit }
+urgence-edit-urgence:
+  url:   /:sf_culture/urgence-edit-urgence/*
+  param: { module: urgence, action: editUrgence }
+urgence-create:
+  url:   /:sf_culture/urgence-create/*
+  param: { module: urgence, action: create }
+urgence-update:
+  url:   /:sf_culture/urgence-update/*
+  param: { module: urgence, action: update }
+urgence-delete:
+  url:   /:sf_culture/urgence-delete/*
+  param: { module: urgence, action: delete }
+urgences-word:
+  url:   /:sf_culture/urgences-word/*
+  param: { module: urgence, action: word }
+urgences-excel:
+  url:   /:sf_culture/urgences-excel/*
+  param: { module: urgence, action: excel }
+urgences-print:
+  url:   /:sf_culture/urgences-print/*
+  param: { module: urgence, action: print }
+urgences-print-codebarre:
+  url:   /:sf_culture/urgences-print-codebarre/*
+  param: { module: urgence, action: printCodeBarre }
+urgences-print-codesbarres:
+  url:   /:sf_culture/urgences-print-codesbarres/*
+  param: { module: urgence, action: printCodesBarres }
+urgences-print-num:
+  url:   /:sf_culture/urgences-print-num/*
+  param: { module: urgence, action: printNumurgence }
+urgences-check-num-urgence:
+  url:   /:sf_culture/urgences-check-num-urgence/*
+  param: { module: urgence, action: checkNumurgence }
+urgence-urgence-update:
+  url:   /:sf_culture/urgence-urgence-update/*
+  param: { module: urgence, action: urgenceUrgenceUpdate }
+   
+#URLS module Acheminement
+acheminement:
+  url:   /:sf_culture/acheminement/*
+  param: { module: acheminement, action: index }
+acheminement-list-ajax:
+  url:   /:sf_culture/acheminement-list-ajax/*
+  param: { module: acheminement, action: listAjax }
+acheminement-new:
+  url:   /:sf_culture/acheminement-new/*
+  param: { module: acheminement, action: new }
+acheminement-edit:
+  url:   /:sf_culture/acheminement-edit/*
+  param: { module: acheminement, action: edit }
+acheminement-create:
+  url:   /:sf_culture/acheminement-create/*
+  param: { module: acheminement, action: create }
+acheminement-update:
+  url:   /:sf_culture/acheminement-update/*
+  param: { module: acheminement, action: update }
+acheminement-delete:
+  url:   /:sf_culture/acheminement-delete/*
+  param: { module: acheminement, action: delete }
+acheminement-print:
+  url:   /:sf_culture/acheminement-print/*
+  param: { module: acheminement, action: print }
+acheminement-colis:
+  url:   /:sf_culture/acheminement-colis/*
+  param: { module: acheminement, action: listColis }
+acheminement-save-colis:
+  url:   /:sf_culture/acheminement-save-colis/*
+  param: { module: acheminement, action: saveColis }
+acheminement-pdf:
+  url:   /:sf_culture/acheminement-pdf/*
+  param: { module: acheminement, action: exportPdf }
+  
+#URLS module Reception
+reception:
+  url:   /:sf_culture/reception/*
+  param: { module: reception, action: index }
+reception-list-ajax:
+  url:   /:sf_culture/reception-list-ajax/*
+  param: { module: reception, action: listAjax }
+reception-delete:
+  url:   /:sf_culture/reception-delete/*
+  param: { module: reception, action: delete }
+reception-word:
+  url:   /:sf_culture/reception-word/*
+  param: { module: reception, action: word }
+reception-excel:
+  url:   /:sf_culture/reception-excel/*
+  param: { module: reception, action: excel }
+reception-print:
+  url:   /:sf_culture/reception-print/*
+  param: { module: reception, action: print }
+  
+#URLS module Inventaire
+inventaires:
+  url:   /:sf_culture/inventaires/*
+  param: { module: inventaires, action: index }
+inventaires-word:
+  url:   /:sf_culture/inventaires-word/*
+  param: { module: inventaires, action: word }
+inventaires-excel:
+  url:   /:sf_culture/inventaires-excel/*
+  param: { module: inventaires, action: excel }
+inventaires-print:
+  url:   /:sf_culture/inventaires-print/*
+  param: { module: inventaires, action: print }
+#URLS module nonconfrme
+nonconforme:
+  url:   /:sf_culture/nonconforme/*
+  param: { module: nonconforme, action: index }
+nonconforme-word:
+  url:   /:sf_culture/nonconforme-word/*
+  param: { module: nonconforme, action: word }
+nonconforme-excel:
+  url:   /:sf_culture/nonconforme-excel/*
+  param: { module: nonconforme, action: excel }
+nonconforme-print:
+  url:   /:sf_culture/nonconforme-print/*
+  param: { module: nonconforme, action: print }
+nonconforme-update:
+  url:   /:sf_culture/nonconforme-update/*
+  param: { module: nonconforme, action: update }
+nonconforme-edit:
+  url:   /:sf_culture/nonconforme-edit/*
+  param: { module: nonconforme, action: edit }
+  
+#URLS module referentiel emplacement
+referentiels-emplacement:
+  url:   /:sf_culture/referentiels-emplacement/*
+  param: { module: emplacements, action: index }
+referentiels-emplacement-list-ajax:
+  url:   /:sf_culture/referentiels-emplacement-list-ajax/*
+  param: { module: emplacements, action: listAjax }
+referentiels-emplacement-new:
+  url:   /:sf_culture/referentiels-emplacement-new/*
+  param: { module: emplacements, action: new }
+referentiels-emplacement-edit:
+  url:   /:sf_culture/referentiels-emplacement-edit/*
+  param: { module: emplacements, action: edit }
+referentiels-emplacement-create:
+  url:   /:sf_culture/referentiels-emplacement-create/*
+  param: { module: emplacements, action: create }
+referentiels-emplacement-update:
+  url:   /:sf_culture/referentiels-emplacement-update/*
+  param: { module: emplacements, action: update }
+referentiels-emplacement-delete:
+  url:   /:sf_culture/referentiels-emplacement-delete/*
+  param: { module: emplacements, action: delete }
+referentiels-emplacement-check-code:
+  url:   /:sf_culture/referentiels-emplacement-check-code/*
+  param: { module: emplacements, action: checkCode }
+
+#URLS module referentiel fournisseurs
+referentiels-fournisseur:
+  url:   /:sf_culture/referentiels-fournisseur/*
+  param: { module: fournisseurs, action: index }
+referentiels-fournisseur-list-ajax:
+  url:   /:sf_culture/referentiels-fournisseur-list-ajax/*
+  param: { module: fournisseurs, action: listAjax }
+referentiels-fournisseur-new:
+  url:   /:sf_culture/referentiels-fournisseur-new/*
+  param: { module: fournisseurs, action: new }
+referentiels-fournisseur-edit:
+  url:   /:sf_culture/referentiels-fournisseur-edit/*
+  param: { module: fournisseurs, action: edit }
+referentiels-fournisseur-create:
+  url:   /:sf_culture/referentiels-fournisseur-create/*
+  param: { module: fournisseurs, action: create }
+referentiels-fournisseur-update:
+  url:   /:sf_culture/referentiels-fournisseur-update/*
+  param: { module: fournisseurs, action: update }
+referentiels-fournisseur-delete:
+  url:   /:sf_culture/referentiels-fournisseur-delete/*
+  param: { module: fournisseurs, action: delete }
+#URLS module referentiel interlocuteurs
+referentiels-interlocuteur:
+  url:   /:sf_culture/referentiels-interlocuteur/*
+  param: { module: interlocuteurs, action: index }
+referentiels-interlocuteur-list-ajax:
+  url:   /:sf_culture/referentiels-interlocuteur-list-ajax/*
+  param: { module: interlocuteurs, action: listAjax }
+referentiels-interlocuteur-new:
+  url:   /:sf_culture/referentiels-interlocuteur-new/*
+  param: { module: interlocuteurs, action: new }
+referentiels-interlocuteur-edit:
+  url:   /:sf_culture/referentiels-interlocuteur-edit/*
+  param: { module: interlocuteurs, action: edit }
+referentiels-interlocuteur-create:
+  url:   /:sf_culture/referentiels-interlocuteur-create/*
+  param: { module: interlocuteurs, action: create }
+referentiels-interlocuteur-update:
+  url:   /:sf_culture/referentiels-interlocuteur-update/*
+  param: { module: interlocuteurs, action: update }
+referentiels-interlocuteur-delete:
+  url:   /:sf_culture/referentiels-interlocuteur-delete/*
+  param: { module: interlocuteurs, action: delete }
+
+#URLS module referentiel RefTransporteur
+referentiels-transporteur:
+  url:   /:sf_culture/referentiels-transporteur/*
+  param: { module: transporteurs, action: index }
+referentiels-transporteur-list-ajax:
+  url:   /:sf_culture/referentiels-transporteur-list-ajax/*
+  param: { module: transporteurs, action: listAjax }
+referentiels-transporteur-new:
+  url:   /:sf_culture/referentiels-transporteur-new/*
+  param: { module: transporteurs, action: new }
+referentiels-transporteur-edit:
+  url:   /:sf_culture/referentiels-transporteur-edit/*
+  param: { module: transporteurs, action: edit }
+referentiels-transporteur-create:
+  url:   /:sf_culture/referentiels-transporteur-create/*
+  param: { module: transporteurs, action: create }
+referentiels-transporteur-update:
+  url:   /:sf_culture/referentiels-transporteur-update/*
+  param: { module: transporteurs, action: update }
+referentiels-transporteur-delete:
+  url:   /:sf_culture/referentiels-transporteur-delete/*
+  param: { module: transporteurs, action: delete }
+
+#URLS module referentiel RefChauffeur
+referentiels-chauffeur:
+  url:   /:sf_culture/referentiels-chauffeur/*
+  param: { module: chauffeur, action: index }
+referentiels-chauffeur-list-ajax:
+  url:   /:sf_culture/referentiels-chauffeur-list-ajax/*
+  param: { module: chauffeur, action: listAjax }
+referentiels-chauffeur-new:
+  url:   /:sf_culture/referentiels-chauffeur-new/*
+  param: { module: chauffeur, action: new }
+referentiels-chauffeur-edit:
+  url:   /:sf_culture/referentiels-chauffeur-edit/*
+  param: { module: chauffeur, action: edit }
+referentiels-chauffeur-create:
+  url:   /:sf_culture/referentiels-chauffeur-create/*
+  param: { module: chauffeur, action: create }
+referentiels-chauffeur-update:
+  url:   /:sf_culture/referentiels-chauffeur-update/*
+  param: { module: chauffeur, action: update }
+referentiels-chauffeur-delete:
+  url:   /:sf_culture/referentiels-chauffeur-delete/*
+  param: { module: chauffeur, action: delete }
+referentiels-chauffeur-print:
+  url:   /:sf_culture/referentiels-chauffeur-print/*
+  param: { module: chauffeur, action: print }
+
+#URLS module referentiel nature
+referentiels-nature:
+  url:   /:sf_culture/referentiels-nature/*
+  param: { module: nature, action: index }
+referentiels-nature-list-ajax:
+  url:   /:sf_culture/referentiels-nature-list-ajax/*
+  param: { module: nature, action: listAjax }
+referentiels-nature-new:
+  url:   /:sf_culture/referentiels-nature-new/*
+  param: { module: nature, action: new }
+referentiels-nature-edit:
+  url:   /:sf_culture/referentiels-nature-edit/*
+  param: { module: nature, action: edit }
+referentiels-nature-create:
+  url:   /:sf_culture/referentiels-nature-create/*
+  param: { module: nature, action: create }
+referentiels-nature-update:
+  url:   /:sf_culture/referentiels-nature-update/*
+  param: { module: nature, action: update }
+referentiels-nature-delete:
+  url:   /:sf_culture/referentiels-nature-delete/*
+  param: { module: nature, action: delete }
+referentiels:
+  url:   /:sf_culture/referentiels-emplacement/*
+  param: { module: emplacements, action: index }
+
+#URLS recherche rapide
+search:
+  url:   /:sf_culture/search/*
+  param: { module: acceuil, action: search }
+search-command:
+  url:   /:sf_culture/search-command/*
+  param: { module: acceuil, action: searchCommand }
+ajax-detail-recherche:
+  url:   /:sf_culture/ajax-detail-recherche/*
+  param: { module: acceuil, action: ajaxDetailRecherche }
+ajax-stat-reception:
+  url:   /:sf_culture/ajax-stat-reception/*
+  param: { module: acceuil, action: ajaxStatReception }
+ajax-stat-expedition:
+  url:   /:sf_culture/ajax-stat-expedition/*
+  param: { module: acceuil, action: ajaxStatExpedition }
+ajax-controle-key:
+  url:   /:sf_culture/ajax-controle-key/*
+  param: { module: acceuil, action: ajaxControleKey }
+
+# URLS gestion des utilisateurs
+gestion-des-utilisateurs:
+  url:   /:sf_culture/gestion-des-utilisateurs
+  param: { module: sfGuardAuth, action: liste }
+gestion-des-utilisateurs-extract:
+  url:   /:sf_culture/gestion-des-utilisateurs-extract
+  param: { module: sfGuardAuth, action: extract }
+utilisateur-new:
+  url:   /:sf_culture/utilisateur-nouveau/*
+  param: { module: sfGuardAuth, action: nouveau }
+utilisateur-create:
+  url:   /:sf_culture/utilisateur-creer/*
+  param: { module: sfGuardAuth, action: creer }
+utilisateur-edit:
+  url:   /:sf_culture/utilisateur-editer/*
+  param: { module: sfGuardAuth, action: editer }
+utilisateur-update:
+  url:   /:sf_culture/utilisateur-modifier/*
+  param: { module: sfGuardAuth, action: modifier }
+utilisateur-delete:
+  url:   /:sf_culture/utilisateur-supprimer/*
+  param: { module: sfGuardAuth, action: supprimer }
+utilisateur-excel:
+  url:   /:sf_culture/utilisateur-excel/*
+  param: { module: sfGuardAuth, action: excel }
+utilisateur-word:
+  url:   /:sf_culture/utilisateur-word/*
+  param: { module: sfGuardAuth, action: word }
+utilisateur-print:
+  url:   /:sf_culture/utilisateur-print/*
+  param: { module: sfGuardAuth, action: print }
+controleNomUser:
+  url:   /:sf_culture/controleNomUser
+  param: { module: sfGuardAuth, action: controleNomUser }
+utilisateur-debloquer:
+  url:   /:sf_culture/utilisateur-debloquer
+  param: { module: sfGuardAuth, action: debloquer }
+controleMailUser:
+  url:   /:sf_culture/controleMailUser
+  param: { module: sfGuardAuth, action: controleMailUser }
+
+#URL asso
+association-br:
+  url:   /:sf_culture/association-br
+  param: { module: associationBR, action: index }
+association-br-complete:
+  url:   /:sf_culture/association-br-complete
+  param: { module: associationBR, action: indexComplete }
+association-br-list-ajax:
+  url:   /:sf_culture/association-br-list-ajax
+  param: { module: associationBR, action: listAjax }
+association-br-new:
+  url:   /:sf_culture/association-br-new
+  param: { module: associationBR, action: new }
+association-br-validerAss:
+  url:   /:sf_culture/association-br-validerAss
+  param: { module: associationBR, action: validerAss }
+association-br-validerAssAjax:
+  url:   /:sf_culture/association-br-validerAssAjax
+  param: { module: associationBR, action: validerAssAjax }
+association-br-validerAss-red:
+  url:   /:sf_culture/association-br-validerAss-red
+  param: { module: associationBR, action: index2 }
+
+# URLS gestion des groupes
+gestion-des-groupes:
+  url:   /:sf_culture/gestion-des-groupes
+  param: { module: sfGuardGroup, action: liste }
+gestion-des-groupes-extract:
+  url:   /:sf_culture/gestion-des-groupes-extract
+  param: { module: sfGuardGroup, action: extract }
+groupe-new:
+  url:   /:sf_culture/groupe-nouveau/*
+  param: { module: sfGuardGroup, action: nouveau }
+groupe-create:
+  url:   /:sf_culture/groupe-creer/*
+  param: { module: sfGuardGroup, action: creer }
+groupe-edit:
+  url:   /:sf_culture/groupe-editer/*
+  param: { module: sfGuardGroup, action: editer }
+groupe-update:
+  url:   /:sf_culture/groupe-modifier/*
+  param: { module: sfGuardGroup, action: modifier }
+groupe-delete:
+  url:   /:sf_culture/groupe-supprimer/*
+  param: { module: sfGuardGroup, action: supprimer }
+groupe-excel:
+  url:   /:sf_culture/groupe-excel/*
+  param: { module: sfGuardGroup, action: excel }
+groupe-word:
+  url:   /:sf_culture/groupe-word/*
+  param: { module: sfGuardGroup, action: word }
+groupe-print:
+  url:   /:sf_culture/groupe-print/*
+  param: { module: sfGuardGroup, action: print }
+controlNomGroupe:
+  url:   /:sf_culture/controlNomGroupe
+  param: { module: sfGuardGroup, action: controlNomGroupe }
+
+# URLS gestion de l authentification
+sf_guard_signin:
+  url:   /:sf_culture/login
+  param: { module: sfGuardAuth, action: signin }
+sf_guard_signout:
+  url:   /:sf_culture/logout
+  param: { module: sfGuardAuth, action: signout }
+sf_guard_password:
+  url:   /:sf_culture/request_password
+  param: { module: sfGuardAuth, action: password }
+sf_guard_editPassword:
+  url:   /:sf_culture/editPassword
+  param: { module: sfGuardAuth, action: editPassword }
+sf_guard_updatePassword:
+  url:   /:sf_culture/updatePassword
+  param: { module: sfGuardAuth, action: updatePassword }
+#URLS module Destinataire Acheminement
+destinataire-acheminement:
+  url:   /:sf_culture/destinataire-acheminement/*
+  param: { module: destinataireAcheminement, action: index }
+destinataire-acheminement-new:
+  url:   /:sf_culture/destinataire-acheminement-new/*
+  param: { module: destinataireAcheminement, action: new }
+destinataire-acheminement-edit:
+  url:   /:sf_culture/destinataire-acheminement-edit/*
+  param: { module: destinataireAcheminement, action: edit }
+destinataire-acheminement-create:
+  url:   /:sf_culture/destinataire-acheminement-create/*
+  param: { module: destinataireAcheminement, action: create }
+destinataire-acheminement-update:
+  url:   /:sf_culture/destinataire-acheminement-update/*
+  param: { module: destinataireAcheminement, action: update }
+destinataire-acheminement-delete:
+  url:   /:sf_culture/destinataire-acheminement-delete/*
+  param: { module: destinataireAcheminement, action: delete }
+destinataire-acheminement-list-ajax:
+  url:   /:sf_culture/destinataire-acheminement-list-ajax/*
+  param: { module: destinataireAcheminement, action: listAjax }
+
+#URLS module Statistiques
+statistiques-retard:
+  url:   /:sf_culture/statistiques-retard/*
+  param: { module: statistiques, action: index }
+statistiques-get-stat:
+  url:   /:sf_culture/statistiques-get-stat/*
+  param: { module: statistiques, action: GetStat }
+statistiques-retard-excel:
+  url:   /:sf_culture/statistiques-retard-excel/*
+  param: { module: statistiques, action: excel }
+  
+#URLS module Statistiques
+encours:
+  url:   /:sf_culture/encours/*
+  param: { module: encours, action: index }
+encours-export:
+  url:   /:sf_culture/encours-export/*
+  param: { module: encours, action: export }
+
+#URLS module de stat global
+statistiques-globale:
+  url:   /:sf_culture/statistiques-globale/*
+  param: { module: statistiquesGlobale, action: index }
+statistiques-globale-export:
+  url:   /:sf_culture/statistiques-globale-export/*
+  param: { module: statistiquesGlobale, action: export }
+#URLS borne accueil chauffeurs
+borne-arrivage:
+  url:   /:sf_culture/borne-arrivage/*
+  param: { module: borneArrivage, action: index }
+borne-expedition:
+  url:   /:sf_culture/borne-expedition/*
+  param: { module: borneExpedition, action: index }
+borne-expedition-create:
+  url:   /:sf_culture/borne-expedition-create/*
+  param: { module: borneExpedition, action: create }
+borne-arrivage-ka:
+  url:   /:sf_culture/borne-arrivage-ka/*
+  param: { module: borneArrivage, action: KeepAlive }

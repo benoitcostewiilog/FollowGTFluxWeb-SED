@@ -1,0 +1,3 @@
+all:
+  javascripts:    [plugins/dataTables/jquery.dataTables.js, plugins/dataTables/dataTables.bootstrap.js, plugins/dataTables/dataTables.responsive.js, plugins/dataTables/dataTables.tableTools.min.js, plugins/contextMenu/jquery.contextmenu.js, plugins/doubleList/jquery.double-list.js]
+  stylesheets:    [plugins/dataTables/dataTables.bootstrap.css, plugins/dataTables/dataTables.responsive.css, plugins/dataTables/dataTables.tableTools.min.css, plugins/contextMenu/jquery.contextMenu.css]

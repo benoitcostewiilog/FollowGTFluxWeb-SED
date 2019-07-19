@@ -1,0 +1,4 @@
+indexSuccess:
+  javascripts:    [plugins/dataTablesV2/datatables.min.js,plugins/dataTablesV2/buttons.colVis.min.js,plugins/dataTablesV2/dataTables.colReorder.min.js, plugins/contextMenu/jquery.contextmenu.js, plugins/datapicker/bootstrap-datepicker.js,plugins/dataTables/datetime-moment.js,plugins/fullcalendar/moment.min.js,plugins/form/jquery.form.js,plugins/chosen/chosen.jquery.js,plugins/toastr/toastr.min.js, plugins/magnific-popup/jquery.magnific-popup.min.js, plugins/datetimepicker/bootstrap-datetimepicker.min.js,plugins/moment/fr.js, plugins/spinedit/bootstrap-spinedit.js, plugins/iCheck/icheck.min.js]
+  stylesheets:    [plugins/dataTablesV2/buttons.bootstrap.min.css, plugins/dataTablesV2/datatables.min.css, plugins/contextMenu/jquery.contextMenu.css, plugins/datapicker/datepicker3.css,plugins/chosen/chosen.css, plugins/magnific-popup/magnific-popup.css, plugins/datetimepicker/bootstrap-datetimepicker.min.css, plugins/iCheck/blue.css]
+

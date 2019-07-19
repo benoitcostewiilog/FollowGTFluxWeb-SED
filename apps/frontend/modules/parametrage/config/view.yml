@@ -1,0 +1,4 @@
+all:
+  javascripts:    [plugins/dataTables/jquery.dataTables.min.js, plugins/dataTables/dataTables.bootstrap.js, plugins/dataTables/dataTables.responsive.js, plugins/dataTables/dataTables.tableTools.min.js,plugins/dataTables/datetime-moment.js,plugins/fullcalendar/moment.min.js, plugins/contextMenu/jquery.contextmenu.js, plugins/datapicker/bootstrap-datepicker.js, plugins/datetimepicker/bootstrap-datetimepicker.min.js,plugins/moment/fr.js,plugins/chosen/chosen.jquery.js, plugins/iCheck/icheck.min.js]
+  stylesheets:    [plugins/dataTables/dataTables.bootstrap.css, plugins/dataTables/dataTables.responsive.css, plugins/dataTables/dataTables.tableTools.min.css, plugins/contextMenu/jquery.contextMenu.css, plugins/datapicker/datepicker3.css, plugins/datetimepicker/bootstrap-datetimepicker.min.css,plugins/chosen/chosen.css, plugins/iCheck/blue.css]
+

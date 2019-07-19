@@ -1,0 +1,31 @@
+WARNING 	2015-07-28 15:18:11 - Undefined offset: 2
+WARNING 	2015-07-28 15:18:20 - Undefined offset: 2
+WARNING 	2015-07-28 15:18:21 - Undefined offset: 2
+WARNING 	2015-07-28 15:18:22 - Undefined offset: 2
+WARNING 	2015-07-28 16:14:07 - utf8_decode() expects parameter 1 to be string, object given
+WARNING 	2015-07-28 16:15:20 - Object of class stdClass could not be converted to string
+WARNING 	2015-07-28 16:16:17 - utf8_decode() expects parameter 1 to be string, object given
+WARNING 	2015-07-28 16:17:39 - Object of class stdClass could not be converted to string
+DEBUG 	2015-07-29 10:41:05 - Debut de DBSync::syncTable (appel par syncAssLigne)
+DEBUG 	2015-07-29 10:41:05 - Requete : SELECT * FROM `mai_ass_ligne_fonction`WHERE ( updated_at >= FROM_UNIXTIME(0) ) 
+WARNING 	2015-07-29 10:41:05 - mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given
+DEBUG 	2015-08-10 11:50:08 - Debut de DBSync::syncTable (appel par syncDatDonnee)
+WARNING 	2015-08-10 11:50:08 - reset() expects parameter 1 to be array, null given
+DEBUG 	2015-08-10 11:50:39 - Debut de DBSync::syncTable (appel par syncCategorie)
+DEBUG 	2015-08-10 11:50:39 - Fin de DBSync::syncTable (appel par syncCategorie)
+DEBUG 	2015-08-10 11:51:11 - Debut de DBSync::syncTable (appel par syncDatDonnee)
+DEBUG 	2015-08-10 11:51:12 - Fin de DBSync::syncTable (appel par syncDatDonnee)
+DEBUG 	2015-08-10 12:04:54 - Debut de DBSync::syncTable (appel par syncDatDonnee)
+DEBUG 	2015-08-10 12:04:54 - Fin de DBSync::syncTable (appel par syncDatDonnee)
+DEBUG 	2015-08-10 12:05:59 - Debut de DBSync::syncTable (appel par syncDatDonnee)
+DEBUG 	2015-08-10 12:05:59 - Fin de DBSync::syncTable (appel par syncDatDonnee)
+WARNING 	2015-08-24 16:24:47 - Use of undefined constant param - assumed 'param'
+WARNING 	2015-08-24 16:25:03 - SoapClient::SoapClient(http://app-test.aero-mobile.fr/webService/modules/main/sendData.php?wsdl): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+
+WARNING 	2015-08-24 16:31:58 - Argument 1 passed to {closure}() must be of the type array, string given, called in C:\Users\Mickael\Documents\MobileIT\dev\AeroMobile\AeroMobileV2_Pau\web\test\webService\test\_tester.php on line 35 and defined
+WARNING 	2015-08-24 16:32:31 - Argument 1 passed to {closure}() must be of the type array, string given, called in C:\Users\Mickael\Documents\MobileIT\dev\AeroMobile\AeroMobileV2_Pau\web\test\webService\test\_tester.php on line 35 and defined
+WARNING 	2015-08-27 17:53:46 - SoapClient::SoapClient(): I/O warning : failed to load external entity &quot;localhostmodules/main/main.php?wsdl&quot;
+WARNING 	2015-08-27 17:53:55 - SoapClient::SoapClient(): I/O warning : failed to load external entity &quot;localhost/modules/main/main.php?wsdl&quot;
+WARNING 	2015-08-27 17:54:06 - SoapClient::SoapClient(): I/O warning : failed to load external entity &quot;localhost/webservice/modules/main/main.php?wsdl&quot;
+WARNING 	2015-08-27 17:54:24 - SoapClient::SoapClient(http://gtlogistics.local/modules/main/main.php?wsdl): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+

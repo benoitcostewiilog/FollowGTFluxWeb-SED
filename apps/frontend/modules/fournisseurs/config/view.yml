@@ -1,0 +1,4 @@
+indexSuccess:
+  javascripts:    [plugins/dataTables/jquery.dataTables.min.js, plugins/dataTables/dataTables.bootstrap.js, plugins/dataTables/dataTables.responsive.js, plugins/dataTables/dataTables.tableTools.min.js, plugins/contextMenu/jquery.contextmenu.js, plugins/datapicker/bootstrap-datepicker.js,plugins/form/jquery.form.js]
+  stylesheets:    [plugins/dataTables/dataTables.bootstrap.css, plugins/dataTables/dataTables.responsive.css, plugins/dataTables/dataTables.tableTools.min.css, plugins/contextMenu/jquery.contextMenu.css, plugins/datapicker/datepicker3.css]
+

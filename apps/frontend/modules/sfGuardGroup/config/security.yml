@@ -1,0 +1,6 @@
+# Ce fichier gere les droits accordés aux groupes concernant la gestion des utilisateurs
+
+#menu reservé au SU et chef de quai
+all:
+  is_secure: on
+  credentials: [[ gestion des groupes ]]

@@ -1,0 +1,4 @@
+indexSuccess:
+  javascripts:    [plugins/dataTables/jquery.dataTables.min.js, plugins/dataTables/dataTables.bootstrap.js, plugins/dataTables/dataTables.responsive.js, plugins/dataTables/dataTables.tableTools.min.js, plugins/contextMenu/jquery.contextmenu.js,plugins/form/jquery.form.js,plugins/fullcalendar/moment.min.js,plugins/moment/fr.js,plugins/timepicker/bootstrap-timepicker.min.js]
+  stylesheets:    [plugins/dataTables/dataTables.bootstrap.css, plugins/dataTables/dataTables.responsive.css, plugins/dataTables/dataTables.tableTools.min.css, plugins/contextMenu/jquery.contextMenu.css, plugins/timepicker/bootstrap-timepicker.min.css]
+

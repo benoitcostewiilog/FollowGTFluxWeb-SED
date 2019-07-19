@@ -1,0 +1,66 @@
+DEBUG 	2015-07-27 10:54:16 - Début de downloadFile
+DEBUG 	2015-07-27 10:54:16 - Fichier enregistre
+DEBUG 	2015-07-27 10:54:16 - Fin de downloadFile
+DEBUG 	2015-07-27 15:44:34 - Début de downloadFile
+DEBUG 	2015-07-27 15:44:34 - Fichier enregistre
+DEBUG 	2015-07-27 15:44:34 - Fin de downloadFile
+DEBUG 	2015-07-27 15:48:22 - Début de downloadFile
+DEBUG 	2015-07-27 15:48:22 - Fichier enregistre
+DEBUG 	2015-07-27 15:48:22 - Fin de downloadFile
+DEBUG 	2015-07-27 15:55:41 - Début de downloadFile
+DEBUG 	2015-07-27 15:55:41 - Fichier enregistre
+DEBUG 	2015-07-27 15:55:41 - Fin de downloadFile
+DEBUG 	2015-07-27 16:17:16 - Début de downloadFile
+DEBUG 	2015-07-27 16:17:16 - Fichier enregistre
+DEBUG 	2015-07-27 16:17:16 - Fin de downloadFile
+DEBUG 	2015-07-27 16:29:28 - Début de downloadFile
+DEBUG 	2015-07-27 16:29:28 - Fichier enregistre
+DEBUG 	2015-07-27 16:29:28 - Fin de downloadFile
+DEBUG 	2015-07-27 16:54:52 - Début de downloadFile
+DEBUG 	2015-07-27 16:54:52 - Fichier enregistre
+DEBUG 	2015-07-27 16:54:52 - Fin de downloadFile
+DEBUG 	2015-07-27 16:55:21 - Début de downloadFile
+DEBUG 	2015-07-27 16:55:21 - Fichier enregistre
+DEBUG 	2015-07-27 16:55:21 - Fin de downloadFile
+DEBUG 	2015-07-27 17:02:16 - Début de downloadFile
+DEBUG 	2015-07-27 17:02:16 - Fichier enregistre
+DEBUG 	2015-07-27 17:02:16 - Fin de downloadFile
+DEBUG 	2015-07-28 10:42:25 - Début de downloadFile
+DEBUG 	2015-07-28 10:42:25 - Fichier enregistre
+DEBUG 	2015-07-28 10:42:25 - Fin de downloadFile
+DEBUG 	2015-07-28 10:51:18 - Début de downloadFile
+DEBUG 	2015-07-28 10:51:18 - Fichier enregistre
+DEBUG 	2015-07-28 10:51:18 - Fin de downloadFile
+DEBUG 	2015-07-28 11:00:43 - Début de downloadFile
+DEBUG 	2015-07-28 11:00:43 - Fichier enregistre
+DEBUG 	2015-07-28 11:00:43 - Fin de downloadFile
+DEBUG 	2015-07-28 11:08:08 - Début de downloadFile
+DEBUG 	2015-07-28 11:08:08 - Fichier enregistre
+DEBUG 	2015-07-28 11:08:08 - Fin de downloadFile
+DEBUG 	2015-07-28 11:17:55 - Début de downloadFile
+DEBUG 	2015-07-28 11:17:55 - Fichier enregistre
+DEBUG 	2015-07-28 11:17:55 - Fin de downloadFile
+DEBUG 	2015-07-28 11:46:50 - Début de downloadFile
+DEBUG 	2015-07-28 11:46:50 - Fichier enregistre
+DEBUG 	2015-07-28 11:46:50 - Fin de downloadFile
+DEBUG 	2015-07-28 11:58:26 - Début de downloadFile
+DEBUG 	2015-07-28 11:58:26 - Fichier enregistre
+DEBUG 	2015-07-28 11:58:26 - Fin de downloadFile
+DEBUG 	2015-07-28 12:05:08 - Début de downloadFile
+DEBUG 	2015-07-28 12:05:08 - Fichier enregistre
+DEBUG 	2015-07-28 12:05:08 - Fin de downloadFile
+DEBUG 	2015-07-28 12:26:52 - Début de downloadFile
+DEBUG 	2015-07-28 12:26:52 - Fichier enregistre
+DEBUG 	2015-07-28 12:26:52 - Fin de downloadFile
+DEBUG 	2015-07-28 13:43:14 - Début de downloadFile
+DEBUG 	2015-07-28 13:43:14 - Fichier enregistre
+DEBUG 	2015-07-28 13:43:14 - Fin de downloadFile
+DEBUG 	2015-07-28 13:46:09 - Début de downloadFile
+DEBUG 	2015-07-28 13:46:09 - Fichier enregistre
+DEBUG 	2015-07-28 13:46:09 - Fin de downloadFile
+DEBUG 	2015-07-28 13:47:49 - Début de downloadFile
+DEBUG 	2015-07-28 13:47:49 - Fichier enregistre
+DEBUG 	2015-07-28 13:47:49 - Fin de downloadFile
+DEBUG 	2015-07-28 14:07:57 - Début de downloadFile
+DEBUG 	2015-07-28 14:07:57 - Fichier enregistre
+DEBUG 	2015-07-28 14:07:57 - Fin de downloadFile

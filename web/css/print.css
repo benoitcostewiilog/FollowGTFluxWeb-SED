@@ -1,0 +1,110 @@
+@media print {
+	body {
+		background:none;
+	}
+	h1{
+		color:#000000;
+	}
+	h2{
+		color:#000000;
+	}
+	.impressionBon {
+		page-break-after: always;
+		height:100%;
+		position:relative;
+	}
+
+	.impressionBonPreparation {
+		page-break-after: always;
+		transform: rotate(90deg);
+		width: 137%;
+		height: 93%;
+		position:relative;
+	}
+
+	.lblPagination {
+		position:absolute;
+		top:950px;
+		right:0;
+	}
+	.sautDePage{
+		display:none;
+	}
+}
+
+@media screen {
+
+	.impressionBon {
+		height:100%;
+		position:relative;
+	}
+
+	.lblPagination {
+		position:absolute;
+		bottom:0;
+		right:0;
+	}
+
+	.impressionBonPreparation {
+		border:1px dotted;
+		position:relative;
+	}
+	.sautDePage{
+		margin-left:-20px;
+	}
+}
+
+@media all {
+
+	.divBonSociete {
+		width:220px;
+		float:left;
+		padding:5px;
+		font-size:14px;
+	}
+	.logoBon{
+		max-width:240px;
+		float:left;
+		margin-top:30px;
+	}
+	.divBonTitre,.divBonAdresseLivraison,.divBonTva,.divBonInformations,.divBonPagination{
+		border:1px solid black;
+		border-radius:10px;
+		width:390px;
+		float:left;
+		padding:5px;
+	}
+	p.miniTitredivBon{
+		font-size:11px;
+		font-weight:bold;
+		text-align:center
+	}
+	.divBonTitre{
+		font-size:20px;
+		text-align:center;
+		float:right;
+		line-height:50px;
+	}
+	.divBonAdresseLivraison{
+		height:130px;
+		float:right;
+		margin-top:10px;
+		text-align:center;
+	}
+	.divBonInformations{
+		width:98.4%;
+		margin-top:10px;
+		margin-bottom:45px;
+		float:right;
+	}
+	.divBLTva{
+		height:70px;
+		margin-left:3px;
+	}
+
+	.factSeparation td{
+		padding: 7px 0px 7px 0px;
+		border-top:1px solid;
+		border-bottom:1px solid;
+	}
+}

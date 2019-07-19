@@ -1,0 +1,1634 @@
+AdmSpool:
+  connection: doctrine
+  tableName: adm_spool
+  columns:
+    id_spool:
+      type: int(11)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    code_etiq:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    nb_etiq:
+      type: int(2)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    parametres:
+      type: string(200)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    imprimante:
+      type: string(200)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    imprimee:
+      type: boolean
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+AdmSupervisionParametrage:
+  connection: doctrine
+  tableName: adm_supervision_parametrage
+  columns:
+    id:
+      type: integer()
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    nom:
+      type: string(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    description:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    valeur:
+      type: string(100)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    created_at:
+      type: timestamp
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    updated_at:
+      type: timestamp
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+RefEmplacement:
+  connection: doctrine
+  tableName: ref_emplacement
+  columns:
+    code_emplacement:
+      type: string(100)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    libelle:
+      type: string(100)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    updated_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    created_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    WrkMouvement:
+      local: code_emplacement
+      foreign: code_emplacement
+      type: many
+RefNature:
+  connection: doctrine
+  tableName: ref_nature
+  columns:
+    id_nature:
+      type: int(2)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    libelle:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    delais:
+      type: time
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    updated_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    created_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    WrkExpedition:
+      local: id_nature
+      foreign: id_nature
+      type: many
+    WrkExpeditionProduit:
+      local: id_nature
+      foreign: id_nature
+      type: many
+    WrkArrivage:
+      local: id_nature
+      foreign: id_nature
+      type: many
+    WrkArrivageProduit:
+      local: id_nature
+      foreign: id_nature
+      type: many
+RefFournisseur:
+  connection: doctrine
+  tableName: ref_fournisseur
+  columns:
+    id_fournisseur:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    libelle:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      default: ''
+      notnull: true
+      autoincrement: false
+    created_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    updated_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    WrkExpedition:
+      local: id_fournisseur
+      foreign: id_fournisseur
+      type: many
+    WrkArrivage:
+      local: id_fournisseur
+      foreign: id_fournisseur
+      type: many
+RefInterlocuteur:
+  connection: doctrine
+  tableName: ref_interlocuteur
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    nom:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      default: ''
+      notnull: true
+      autoincrement: false
+    prenom:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      default: ''
+      notnull: true
+      autoincrement: false
+    mail:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      default: ''
+      notnull: true
+      autoincrement: false
+    id_emplacement:
+      type: int(11)
+      fixed: false
+      unsigned: false
+      primary: false
+      default: null
+      autoincrement: false
+    created_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    updated_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    RefEmplacement:
+      local: id_emplacement
+      foreign: code_emplacement
+      type: one
+RefTransporteur:
+  connection: doctrine
+  tableName: ref_transporteur
+  columns:
+    id_transporteur:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    libelle:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      default: ''
+      notnull: true
+      autoincrement: false
+    created_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    updated_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    WrkExpedition:
+      local: id_transporteur
+      foreign: id_transporteur
+      type: many
+    WrkArrivage:
+      local: id_transporteur
+      foreign: id_transporteur
+      type: many
+    RefChauffeur:
+      local: id_transporteur
+      foreign: id_transporteur
+      type: many
+RefChauffeur:
+  connection: doctrine
+  tableName: ref_chauffeur
+  columns:
+    id_chauffeur:
+      type: int(11)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    nom:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    prenom:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    num_doc_id:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    id_transporteur:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      autoincrement: false
+    updated_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    created_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    RefTransporteur:
+      local: id_transporteur
+      foreign: id_transporteur
+      type: one
+    WrkExpedition:
+      local: id_chauffeur
+      foreign: id_chauffeur
+      type: many
+    WrkArrivage:
+      local: id_chauffeur
+      foreign: id_chauffeur
+      type: many
+WrkExpedition:
+  connection: doctrine
+  tableName: wrk_expedition
+  columns:
+    id_expedition:
+      type: integer(11)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    id_fournisseur:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    id_transporteur:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    id_chauffeur:
+      type: integer(11)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    lettre_voiture:
+      type: string(100)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    nb_colis:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    nb_palette:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    immatriculation:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    rep_signature:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    id_nature:
+      type: int(2)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    br_sap:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    statut:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    commentaire:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    created_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    updated_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    RefTransporteur:
+      local: id_transporteur
+      foreign: id_transporteur
+      type: one
+    RefChauffeur:
+      local: id_chauffeur
+      foreign: id_chauffeur
+      type: one
+    RefFournisseur:
+      local: id_fournisseur
+      foreign: id_fournisseur
+      type: one
+    WrkExpeditionProduit:
+      local: id_expedition
+      foreign: id_expedition
+      type: many
+    RefNature:
+      local: id_nature
+      foreign: id_nature
+      type: one
+WrkExpeditionProduit:
+  connection: doctrine
+  tableName: wrk_expedition_produit
+  columns:
+    id_expedition_produit:
+      type: integer(11)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    id_expedition:
+      type: integer(11)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    ref_produit:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    br_sap:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    id_nature:
+      type: int(2)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    created_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    updated_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    WrkExpedition:
+      local: id_expedition
+      foreign: id_expedition
+      type: one
+    RefNature:
+      local: id_nature
+      foreign: id_nature
+      type: one
+WrkArrivage:
+  connection: doctrine
+  tableName: wrk_arrivage
+  columns:
+    id_arrivage:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    id_fournisseur:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    id_transporteur:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    id_chauffeur:
+      type: integer(11)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    lettre_voiture:
+      type: string(100)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    nb_colis:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    nb_palette:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    immatriculation:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    tracking_four:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      default: ''
+      notnull: true
+      autoincrement: false
+    commande_achat:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      default: ''
+      notnull: true
+      autoincrement: false
+    urgent:
+      type: boolean
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    date_livraison_debut:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    date_livraison_fin:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    id_interlocuteur:
+      type: integer(11)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    id_contact_PFF:
+      type: integer(11)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    id_user:
+      type: integer(11)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    rep_signature:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    id_nature:
+      type: int(2)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    br_sap:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    statut:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    commentaire:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    created_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    updated_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    RefTransporteur:
+      local: id_transporteur
+      foreign: id_transporteur
+      type: one
+    RefChauffeur:
+      local: id_chauffeur
+      foreign: id_chauffeur
+      type: one
+    RefFournisseur:
+      local: id_fournisseur
+      foreign: id_fournisseur
+      type: one
+    WrkArrivageProduit:
+      local: id_arrivage
+      foreign: id_arrivage
+      type: many
+    RefNature:
+      local: id_nature
+      foreign: id_nature
+      type: one
+    RefInterlocuteur:
+      local: id_interlocuteur
+      foreign: id
+      type: one
+    RefContactPFF:
+      class: RefInterlocuteur
+      local: id_contact_PFF
+      foreign: id
+      type: one
+WrkArrivageProduit:
+  connection: doctrine
+  tableName: wrk_arrivage_produit
+  columns:
+    id_arrivage_produit:
+      type: integer(11)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    id_arrivage:
+      type: integer(11)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    ref_produit:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    br_sap:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    id_nature:
+      type: int(2)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    id_utilisateur:
+      type: integer(11)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    created_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    updated_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    WrkArrivage:
+      local: id_arrivage
+      foreign: id_arrivage
+      type: one
+    RefNature:
+      local: id_nature
+      foreign: id_nature
+      type: one
+WrkMouvement:
+  connection: doctrine
+  tableName: wrk_mouvement
+  columns:
+    id_mouvement:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    id_utilisateur:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    heure_prise:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    ref_produit:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    br_sap:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    code_emplacement:
+      type: string(100)
+      fixed: false
+      unsigned: false
+      primary: false
+      default: ''
+      notnull: true
+      autoincrement: false
+    retry:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    type:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      default: ''
+      notnull: true
+      autoincrement: false
+    groupe:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      default: ''
+      notnull: false
+      autoincrement: false
+    commentaire:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      default: ''
+      notnull: false
+      autoincrement: false
+    quantite:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    signature:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    photos:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    anomalie:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    created_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    updated_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    RefEmplacement:
+      local: code_emplacement
+      foreign: code_emplacement
+      type: one
+    WrkArrivageProduit:
+      local: ref_produit
+      foreign: br_sap
+      type: one
+WrkAcheminement:
+  connection: doctrine
+  tableName: wrk_acheminement
+  columns:
+    id_acheminement:
+      type: integer(11)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    num_acheminement:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    suffix_colis:
+      type: integer(11)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    nb_colis:
+      type: integer(11)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    tracking:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    ref_produit:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    code_emplacement_prise:
+      type: string(100)
+      fixed: false
+      unsigned: false
+      primary: false
+      default: ''
+      notnull: true
+      autoincrement: false
+    code_emplacement_depose:
+      type: string(100)
+      fixed: false
+      unsigned: false
+      primary: false
+      default: ''
+      notnull: true
+      autoincrement: false
+    delais:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      default: ''
+      notnull: true
+      autoincrement: false
+    id_utilisateur:
+      type: integer(11)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    date_fait:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    statut:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    demandeur:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    destinataire:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    designation:
+      type: string(100)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    created_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    updated_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    RefEmplacementPrise:
+      class: RefEmplacement
+      local: code_emplacement_prise
+      foreign: code_emplacement
+      type: one
+    RefEmplacementDepose:
+      class: RefEmplacement
+      local: code_emplacement_depose
+      foreign: code_emplacement
+      type: one
+    RefDestinataireAcheminement:
+      local: id_utilisateur
+      foreign: id_destinataire_acheminement
+      type: one
+    wrkAcheminementColis:
+      class: WrkColisAcheminement
+      local: id_acheminement
+      foreign: id_acheminement
+      type: many
+AdmParametrage:
+  connection: doctrine
+  tableName: adm_parametrage
+  columns:
+    id_parametrage:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    nom_parametrage:
+      type: string(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    actif:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+WrkInventaire:
+  connection: doctrine
+  tableName: wrk_inventaire
+  columns:
+    id_inventaire:
+      type: integer(11)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    id_utilisateur:
+      type: integer(11)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    heure_prise:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    ref_produit:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    code_emplacement:
+      type: string(100)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    created_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    updated_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    RefEmplacement:
+      local: code_emplacement
+      foreign: code_emplacement
+      type: one
+RefFerie:
+  connection: doctrine
+  tableName: ref_ferie
+  columns:
+    id_ferie:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    date:
+      type: date(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    libelle:
+      type: string(30)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+RefHoraire:
+  connection: doctrine
+  tableName: ref_horaire
+  columns:
+    id_horaire:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    jour:
+      type: integer(1)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    fermer:
+      type: boolean
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    heure_debut:
+      type: time
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    heure_fin:
+      type: time
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    created_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    updated_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+RefWidget:
+  connection: doctrine
+  tableName: ref_widget
+  columns:
+    id_widget:
+      type: integer
+      primary: true
+    name:
+      type: string
+      primary: false
+    created_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    updated_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    WrkGroupWidget:
+      local: id_widget
+      foreign: id_widget
+      type: many
+WrkGroupWidget:
+  connection: doctrine
+  tableName: wrk_group_widget
+  columns:
+    group_id:
+      type: integer
+      primary: true
+    id_widget:
+      type: integer
+      primary: true
+    ordre:
+      type: integer(2)
+      primary: false
+    created_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    updated_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    sfGuardGroup:
+      local: group_id
+      foreign: id
+      type: one
+    RefWidget:
+      local: id_widget
+      foreign: id_widget
+      type: one
+RefDestinataireAcheminement:
+  connection: doctrine
+  tableName: ref_destinataire_acheminement
+  columns:
+    id_destinataire_acheminement:
+      type: integer(11)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    destinataire:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    created_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    updated_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+RefEmplacementAcheminement:
+  connection: doctrine
+  tableName: ref_emplacement_acheminement
+  columns:
+    code_emplacement:
+      type: string(100)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    libelle:
+      type: string(100)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    updated_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    created_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+WrkColisAcheminement:
+  connection: doctrine
+  tableName: wrk_colis_acheminement
+  columns:
+    id_colis:
+      type: integer(11)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    id_acheminement:
+      type: integer(11)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    tracking:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    numero_colis:
+      type: integer(11)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    designation:
+      type: string(100)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    statut:
+      type: string(100)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    updated_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    created_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+WrkUrgence:
+  connection: doctrine
+  tableName: wrk_urgence
+  columns:
+    id_urgence:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    id_fournisseur:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    id_transporteur:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    id_chauffeur:
+      type: integer(11)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    lettre_voiture:
+      type: string(100)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    nb_colis:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    nb_palette:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    immatriculation:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    tracking_four:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      default: ''
+      notnull: true
+      autoincrement: false
+    commande_achat:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      default: ''
+      notnull: true
+      autoincrement: false
+    urgent:
+      type: boolean
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    date_livraison_debut:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    date_livraison_fin:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    id_interlocuteur:
+      type: integer(11)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    rep_signature:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    br_sap:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    statut:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    commentaire:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    id_arrivage:
+      type: integer(11)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    created_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    updated_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    RefTransporteur:
+      local: id_transporteur
+      foreign: id_transporteur
+      type: one
+    RefChauffeur:
+      local: id_chauffeur
+      foreign: id_chauffeur
+      type: one
+    RefFournisseur:
+      local: id_fournisseur
+      foreign: id_fournisseur
+      type: one
+    RefInterlocuteur:
+      local: id_interlocuteur
+      foreign: id
+      type: one
+    WrkArrivage:
+      local: id_arrivage
+      foreign: id_arrivage
+      type: one

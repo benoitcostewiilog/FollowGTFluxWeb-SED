@@ -1,0 +1,179 @@
+body{
+  font-size: 14px;
+}
+.fc-today{
+   background-color: #FFE0C2;
+   border: 1px solid rgb(242,151,29) !important;
+}
+.fc-border-separate{
+	box-shadow: 1px 1px 3px rgb(168, 168, 168);
+}
+.fc-header-title > h2{
+	margin-top: 15px;
+	margin-left: 10px;
+	font-size: 15pt;
+	border:none;
+}
+fieldset.collapsed{
+        border-bottom-width: 0;
+        border-left-width: 0;
+        border-right-width: 0;
+}
+fieldset{
+	display:table-caption;
+	width:80%;
+	margin:auto;
+	border:0.5px solid lightgrey;
+}
+#paramLegend:hover, #recapLegend:hover{
+	color: rgb(242, 151, 29);
+}
+.ibutton-container{
+	display: inline-block;
+	vertical-align: middle;
+}
+.libereTrn, .libereTrn:hover, .libereTrn:active{
+	margin:5px;
+}
+.fc-view{
+	height: 300px;
+	overflow-y: auto;
+}
+#boxVerif{
+	cursor:pointer;
+	float: left;
+	margin-left:12px;
+	height:60px;
+	margin-top:20px;
+	width:180px;
+	box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.25) inset;
+	border-radius:5px;
+	border: 1px solid rgb(199, 124, 23);
+	background-color:rgb(242,151,29);
+	width: 195px;
+}
+#boxVerif:hover{
+	cursor:pointer;
+	background: none repeat scroll 0 0 #f4af37;
+	border: 1px solid #C77C17;
+}
+#boxVerif:active{
+	background: none repeat scroll 0 0 #F2971D;
+	border: 1px solid #C77C17;
+	box-shadow: 0px 1px 2px grey inset;
+	transition: background 0s ease 0s, border 0s ease 0s;
+}
+#boxVerifBleu{
+	cursor:pointer;
+	float: left;
+	margin-left:12px;
+	height:60px;
+	margin-top:20px;
+	width: 195px;
+	box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.25) inset;
+	border-radius:5px;
+	border: 1px solid rgb(16,127,201);
+	background-color:rgb(18,149,237);
+}
+#boxVerifBleu:hover{
+	cursor:pointer;
+	background: none repeat scroll 0 0 #14C0FF;
+	border: 1px solid #107FC9;
+}
+#boxVerifBleu:active{
+	background: none repeat scroll 0 0 #107FC9;
+	border: 1px solid #107FC9;
+	box-shadow: 0px 1px 2px grey inset;
+	transition: background 0s ease 0s, border 0s ease 0s;
+}
+#enAttente:hover{
+	cursor:pointer;
+}
+#enCours:hover{
+	cursor:pointer;
+}
+#recepAuj:hover{
+	cursor:pointer;
+}
+.divTdB{
+	margin: 15px 10px 0px;
+	height:110px;
+	border-radius:10px;
+	background:rgba(240,240,240,0.8);
+}
+.nbBoxVerif{
+	float:left;
+	color:white;
+	font-size:30px;
+	margin: 10px 0px 0px 10px;
+	width:30px;
+}
+#ASuperviser{
+	border-left:1px solid rgb(199, 124, 23);
+	width: 110px;
+	float:right;
+	color:white;
+	font-size:12px;
+	margin:10px -20px 0px 0px;
+}
+#AReceptionner{
+	border-left:1px solid rgb(16,127,201);
+	width: 120px;
+	float:right;
+	color:white;
+	font-size:12px;
+	margin:10px -20px 0px 0px;
+}
+.txtBoxVerif{
+	float:left;
+	margin:22px 0px 0px 20px;
+	width:110px;
+	border-right:1px solid rgb(204, 204, 204);
+}
+.spnBoxVerif{
+	color:rgb(242,151,29);
+	font-size:30px;
+	margin:5px 0px 0px 8px;
+}
+.txtMultiBoxVerif{
+	float:left;
+	margin:25px 0px 0px -20px;
+}
+.btnRaccourcie{
+	padding:4px;
+	border:0px;
+	font-size:10px;
+}
+.txtBoxVerifLast{
+	float:left; 
+	margin:22px 0px 0px 20px; 
+	width:160px;
+}
+#graphique{
+	width:800px;
+	height:250px;
+	margin:auto;
+}
+#graphContainer{
+	margin:15px 0px 0px 10px;
+	width:940px;
+	height:330px;
+	border-radius:10px;
+	background:rgba(240, 240, 240, 0.9);
+        text-align:center;
+        margin-left: auto;
+        margin-right: auto;
+}
+#graphTable{
+	width:920px;
+	margin-top:10px;
+}
+#graphTable td{
+	margin-top:10px;
+	font-size:10px;
+}
+#graphTable span{
+	-moz-user-select: none;
+	margin-top:10px;
+	text-align:center;
+}

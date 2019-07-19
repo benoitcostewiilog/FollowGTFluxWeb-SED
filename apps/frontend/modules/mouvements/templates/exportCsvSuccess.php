@@ -1,0 +1,5 @@
+<?php echo __('Date/Heure'); ?>;<?php echo __('Numéro d’Arrivage'); ?>;<?php echo __('Action'); ?>;<?php echo __('Emplacement'); ?>;<?php echo __('Quantite'); ?>;<?php echo __('Commentaire'); ?>;<?php echo __('Groupe'); ?>;<?php echo __('Utilisateur'); ?>;<?php echo __('Arrivage'); ?><?php echo "\r\n"; ?>
+<?php foreach ($mouvements as $mouvement): ?>
+<?php echo date('d/m/Y H:i:s', strtotime($mouvement->getHeurePrise())) ?>;<?php echo $mouvement->getRefProduit() ?>;<?php echo $mouvement->getType() ?>;<?php echo ($mouvement->getRefEmplacement() ? $mouvement->getRefEmplacement()->getLibelle() : $mouvement->getCodeEmplacement()) ?>;<?php echo ($mouvement->getQuantite() != "")? $mouvement->getQuantite() : '1' ?>;<?php echo ($mouvement->getCommentaire() != "")? $mouvement->getCommentaire() : 'N/C' ?>;<?php echo $mouvement->getGroupe() ?>;<?php echo (isset($users[$mouvement->getIdUtilisateur()]) ? $users[$mouvement->getIdUtilisateur()] : $mouvement->getIdUtilisateur()) ?>;<?php echo ($mouvement->getWrkArrivageProduit()) ? $mouvement->getWrkArrivageProduit()->getRefProduit() : 'Absent' ?><?php echo "\r\n"; ?>
+<?php endforeach; ?>
+

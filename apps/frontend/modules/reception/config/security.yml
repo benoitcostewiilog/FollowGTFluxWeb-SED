@@ -1,0 +1,6 @@
+
+all:
+  is_secure: on
+  credentials: [[ reception ]]
+delete:
+  credentials: [reception-ecriture]

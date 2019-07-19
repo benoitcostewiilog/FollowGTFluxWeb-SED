@@ -1,0 +1,80 @@
+.textRecherche {
+	border: solid 1px lightgrey;
+	margin:5px 0 5px 0;
+	padding:5px;
+	border-radius: 4px;
+	background-color: white;
+}
+
+.textRecherche:focus {
+	/*background-color: rgb(255, 213, 157);*/
+	outline: 0 none;
+}
+
+#spanSearch {
+	position: relative;
+	width: auto;
+}
+
+#clear_input_search {
+	width:15px;
+	display: inline-block;
+	position: absolute;
+	top:-2px;
+	right: 15px;
+	cursor: pointer;
+	opacity:0.5;
+	transition: all 0.5s ease 0s;
+}
+
+#clear_input_search:hover {
+	opacity:1;
+}
+
+#searchResult {
+	position:absolute;
+	box-shadow: 5px 5px 5px grey;
+	text-align: center;
+	background: white;
+	box-shadow: 0px 2px 5px grey;
+	border-radius: 0px 0px 4px 4px;
+	width:301px;
+	margin-left:2px;
+	max-height:300px;
+	overflow:auto;
+	display:none;
+}
+
+ul.searchautocomplete {
+	text-align:left;
+    list-style-type: none;
+	margin-top:10px;
+}
+
+li.searchautocomplete {
+	margin:5px;
+	font-family: "Maven Pro",Lucida Grande,Helvetica,Sans-serif;
+	font-size: 12px;
+	cursor:pointer;
+}
+
+li.searchautocompleteHead {
+	margin:5px;
+	font-family: "Maven Pro",Lucida Grande,Helvetica,Sans-serif;
+	font-size: 15px;
+	font-weight:bold;
+}
+
+li.searchautocomplete:hover {
+	background-color:lightgrey;
+}
+
+.searchLink:hover {
+	color:rgb(242,151,29);
+}
+
+#closebtn{
+	margin:10px 10px 0px 0px;
+	float:right;
+	cursor:pointer;
+}

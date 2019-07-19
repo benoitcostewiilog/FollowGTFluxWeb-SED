@@ -1,0 +1,4 @@
+indexSuccess:
+  javascripts:    [plugins/form/jquery.form.js,plugins/chosen/chosen.jquery.js,plugins/toastr/toastr.min.js, plugins/magnific-popup/jquery.magnific-popup.min.js,plugins/moment/fr.js, plugins/spinedit/bootstrap-spinedit.js, plugins/iCheck/icheck.min.js, plugins/sweetalert/sweetalert.min.js]
+  stylesheets:    [plugins/chosen/chosen.css, plugins/magnific-popup/magnific-popup.css,plugins/iCheck/blue.css]
+

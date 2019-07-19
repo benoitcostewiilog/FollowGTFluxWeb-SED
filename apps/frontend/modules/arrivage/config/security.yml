@@ -1,0 +1,15 @@
+# Ce fichier gere les droits accord�s aux groupes concernant la gestion des utilisateurs
+
+all:
+  is_secure: on
+  credentials: [[ arrivage ]]
+create:
+  credentials: [arrivage-ecriture]
+new:
+  credentials: [arrivage-ecriture]
+edit:
+  credentials: [arrivage-ecriture]
+update:
+  credentials: [arrivage-ecriture]
+delete:
+  credentials: [arrivage-ecriture]
