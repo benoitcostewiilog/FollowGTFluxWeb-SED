@@ -32,7 +32,6 @@ body{color:#1f1f1f!important;background:url(<?php echo image_path("bckgrnd_blur.
                 </div>
                 <button type="submit" class="btn btn-primary block full-width m-b"><?php echo __('Connexion') ?></button>
                 <?php echo $form->renderHiddenFields(); ?>
-                <div style="font-weight: bold;font-size: large;"><?php echo $message ?></div>
             </form>
         </div>
     </div>
