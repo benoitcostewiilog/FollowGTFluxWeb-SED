@@ -7,9 +7,9 @@
         <link rel="icon" type="image/png" href="<?php echo image_path("favicon.png"); ?>"/>
 
         <?php if (has_slot("page_title")) { ?>
-            <title>MobileStock | <?php include_slot("page_title") ?></title>
+            <title>Follow gt | <?php include_slot("page_title") ?></title>
         <?php } else { ?>
-            <title>MobileStock</title>
+            <title>Follow gt</title>
         <?php } ?>
 
         <script src="/js/jquery-1.9.1.min.js" type="text/javascript"></script>
